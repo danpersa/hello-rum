@@ -3,7 +3,8 @@
   (require [rum.core :as rum]
            [immutant.web :as web]
            [ring.middleware.resource :as ring-res]
-           [ring.middleware.file :as ring-file]))
+           [ring.middleware.file :as ring-file]
+           [hello-rum.components :as comp]))
 
 (rum/defc my-comp [s] [:div s])
 
@@ -12,9 +13,14 @@
   <body>
     <div>Hello To The Page</div>
     <div id='my-hello-component'>"
-       (rum/render-html (my-comp "hello"))
-       "</div>
-       <script src='app/main.js' type='text/javascript'></script>
+       (rum/render-html (comp/my-comp "hello"))
+       "</div>"
+       "<div class=example>
+          <div class=example-title>Local state</div>
+       <div id=local-state>"
+         (rum/render-html (comp/local-state "Clicks count")) "</div>
+       </div>"
+       "<script src='app/main.js' type='text/javascript'></script>
   </body>
 </html>"))
 
