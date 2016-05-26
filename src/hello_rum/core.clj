@@ -20,7 +20,7 @@
        <div id=local-state>"
          (rum/render-html (comp/local-state "Clicks count")) "</div>
        </div>"
-       "<script src='app/main.js' type='text/javascript'></script>
+       "<script src='app/js/main.js' type='text/javascript'></script>
   </body>
 </html>"))
 
@@ -29,7 +29,7 @@
    :body html})
 
 (def app-with-static (ring-res/wrap-resource app "public"))
-(def app-with-static-files (ring-file/wrap-file app "/Users/dpersa/Prog/clojure/hello-rum/target"))
+; (def app-with-static-files (ring-file/wrap-file app "/Users/dpersa/Prog/clojure/hello-rum/target"))
 
 (defn -main
   "I don't do a whole lot ... yet."
@@ -39,6 +39,6 @@
 
 (comment
   (def started
-    (web/run app-with-static-files {:host "localhost" :port 8080 :path "/app"})))
+    (web/run app-with-static {:host "localhost" :port 8080 :path "/app"})))
 (comment
   (web/stop started))

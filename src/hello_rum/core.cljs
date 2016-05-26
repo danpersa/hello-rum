@@ -7,10 +7,10 @@
   (js/document.getElementById id))
 
 (defn mount-my-comp! [mount-el]
-  (rum/mount (comp/my-comp "XXX") mount-el))
+  (rum/mount (comp/my-comp "This is the stuff") mount-el))
 
 (defn mount-local-state! [mount-el]
-  (rum/mount (comp/local-state "Clicks count") mount-el))
+  (rum/mount (comp/local-state "Click count") mount-el))
 
 (mount-my-comp! (el "my-hello-component"))
 

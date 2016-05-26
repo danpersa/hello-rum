@@ -12,3 +12,8 @@ pom.xml.asc
 *.iml
 .idea
 .DS_Store
+resources/public/js/out
+resources/public/js/advanced
+resources/public/js/main.js
+resources/public/js/main.js.map
+figwheel_server.log

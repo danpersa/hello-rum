@@ -20,6 +20,10 @@ FIXME: listing of options this app accepts.
 
 ...
 
+## Developing
+
+    lein figwheel
+
 ### Bugs
 
 ...

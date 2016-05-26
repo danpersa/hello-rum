@@ -13,7 +13,8 @@
   :main ^:skip-aot hello-rum.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
-  :plugins [ [lein-cljsbuild "1.1.2"] ]
+  :plugins [[lein-cljsbuild "1.1.2"]
+            [lein-figwheel "0.5.3-2"]]
 
   :cljsbuild
   { :builds
@@ -21,12 +22,23 @@
      :source-paths ["src"]
      :compiler
      { :main           hello-rum.core
-      :output-to      "target/main.js"
+      :output-to      "resources/public/js/main.js"
+      :output-dir     "resources/public/js/advanced"
       :optimizations  :advanced
-      :source-map     "target/main.js.map"
+      :source-map     "resources/public/js/main.js.map"
       :pretty-print   false
       :compiler-stats true
       :parallel-build true }}
+
+    { :id "fig"
+     :source-paths ["src"]
+     :figwheel true
+     :compiler
+     { :main           hello-rum.core
+      :asset-path "js/out"
+      :output-to "resources/public/js/main.js"
+      :output-dir "resources/public/js/out"
+      :source-map-timestamp true }}
 
     { :id "none"
      :source-paths ["src"]
