@@ -1,0 +1,98 @@
+.clicker {
+  font-size: 30px;
+  color: blue;
+  margin-top: 10px;
+  margin-left: 50px; }
+
+.sort-links {
+  text-align: right; }
+  .sort-links a.active {
+    color: black; }
+
+.exercises .list-name {
+  font-weight: bold;
+  font-size: 20px; }
+.exercises .panel-heading {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+button.task-button {
+  width: 50px;
+  height: 100%;
+  border-radius: 0; }
+
+form#new-task .form-control {
+  width: 100%; }
+form#new-task .form-control:focus {
+  z-index: 2; }
+form#new-task input[type=text] {
+  height: auto;
+  border-radius: 0;
+  border-left: 0px; }
+form#new-task button[type=submit] {
+  width: 100px;
+  border-radius: 0; }
+
+form.flat-form .form-control {
+  width: 100%; }
+form.flat-form .form-control:focus {
+  z-index: 2; }
+form.flat-form input[type=text] {
+  height: auto;
+  border-radius: 0; }
+form.flat-form button[type=submit] {
+  width: 100px;
+  border-radius: 0; }
+
+form.new-tag input[type=text] {
+  border-left: 0px; }
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+.list-group-item.draggable {
+  cursor: move; }
+.list-group-item .completed {
+  color: #a9a9a9;
+  text-decoration: line-through; }
+.list-group-item .input-lg {
+  margin-left: 10px;
+  width: 50%; }
+.list-group-item .task-name {
+  width: 40%;
+  cursor: text; }
+  .list-group-item .task-name, .list-group-item .task-name div, .list-group-item .task-name form, .list-group-item .task-name input {
+    display: inline; }
+  .list-group-item .task-name input {
+    margin-left: 10px;
+    width: 40%; }
+  .list-group-item .task-name span {
+    line-height: 2.45em; }
+.list-group-item .task-buttons {
+  margin-top: 10px; }
+  .list-group-item .task-buttons .btn-group .last-button {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important; }
+.list-group-item .task-completed {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 7px; }
+.list-group-item .task-date {
+  line-height: 1;
+  color: #a9a9a9;
+  margin-left: 5px; }
+
+.tag-item .tag-move {
+  padding-right: 10px; }
+
+.sort-by-tag-group {
+  padding-right: 10px; }
+  .sort-by-tag-group span.active {
+    color: red; }
+
+.as-sortable-placeholder {
+  border: 1px dashed darkgrey;
+  box-sizing: border-box;
+  background-color: #dbdbdb; }
+
+/*# sourceMappingURL=tasks.css.map */

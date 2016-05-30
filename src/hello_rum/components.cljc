@@ -10,5 +10,6 @@
              [:div
               {:style {"-webkit-user-select" "none"
                        "cursor" "pointer"}
+               :class {"clicker"}
                :on-click (fn [_] (swap! *count inc)) }
               title ": " @*count]))

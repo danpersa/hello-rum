@@ -9,7 +9,9 @@
                  [cljsjs/react-dom           "15.0.1-1"]
                  [org.immutant/immutant "2.1.4"]
                  [ring/ring-core "1.4.0"]
-                 [rum "0.8.3"]]
+                 [rum "0.8.3"]
+                 [figwheel-sidecar "0.5.1"]
+                 [com.stuartsierra/component "0.3.1"]]
   :main ^:skip-aot hello-rum.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
@@ -17,39 +19,40 @@
             [lein-figwheel "0.5.3-2"]]
 
   :cljsbuild
-  { :builds
-   [{ :id "advanced"
+  {:builds
+   [{:id           "advanced"
      :source-paths ["src"]
      :compiler
-     { :main           hello-rum.core
-      :output-to      "resources/public/js/main.js"
-      :output-dir     "resources/public/js/advanced"
-      :optimizations  :advanced
-      :source-map     "resources/public/js/main.js.map"
-      :pretty-print   false
-      :compiler-stats true
-      :parallel-build true }}
+                   {:main           hello-rum.core
+                    :output-to      "resources/public/js/main.js"
+                    :output-dir     "resources/public/js/advanced"
+                    :optimizations  :advanced
+                    :source-map     "resources/public/js/main.js.map"
+                    :pretty-print   false
+                    :compiler-stats true
+                    :parallel-build true}}
 
-    { :id "fig"
+    {:id           "dev"
      :source-paths ["src"]
-     :figwheel true
+     :figwheel     true
      :compiler
-     { :main           hello-rum.core
-      :asset-path "js/out"
-      :output-to "resources/public/js/main.js"
-      :output-dir "resources/public/js/out"
-      :source-map-timestamp true }}
+                   {:main                 hello-rum.core
+                    :asset-path           "js/out"
+                    :output-to            "resources/public/js/main.js"
+                    :output-dir           "resources/public/js/out"}}
 
-    { :id "none"
+    {:id           "none"
      :source-paths ["src"]
      :compiler
-     { :main           hello-rum.core
-      :output-to      "target/main.js"
-      :output-dir     "target/none"
-      :asset-path     "target/none"
-      :optimizations  :none
-      :source-map     true
-      :compiler-stats true
-      :parallel-build true }}
+                   {:main           hello-rum.core
+                    :output-to      "target/main.js"
+                    :output-dir     "target/none"
+                    :asset-path     "target/none"
+                    :optimizations  :none
+                    :source-map     true
+                    :compiler-stats true
+                    :parallel-build true}}
     ]}
+  :figwheel {
+     :css-dirs ["resources/public/css"]}
   )
