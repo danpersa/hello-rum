@@ -10,6 +10,10 @@
 
 (def html
   (str "<html>
+  <head>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/tasks.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/material.min.inc.css\">
+  </head>
   <body>
     <div>Hello To The Page</div>
     <div id='my-hello-component'>"

@@ -5,11 +5,12 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript  "1.8.51"]
-                 [cljsjs/react               "15.0.1-1"]
-                 [cljsjs/react-dom           "15.0.1-1"]
+                 [cljsjs/react               "15.1.0-0"]
+                 [cljsjs/react-dom           "15.1.0-0"]
                  [org.immutant/immutant "2.1.4"]
                  [ring/ring-core "1.4.0"]
-                 [rum "0.8.3"]
+                 [rum "0.10.1"]
+                 [rum-mdl "0.1.0"]
                  [figwheel-sidecar "0.5.1"]
                  [com.stuartsierra/component "0.3.1"]]
   :main ^:skip-aot hello-rum.core
