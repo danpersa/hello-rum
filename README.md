@@ -13,6 +13,11 @@ Open the shown url in the browser.
 
     lein figwheel
 
+## Libraries
+
+https://github.com/madvas/cljs-react-material-ui
+https://github.com/madvas/cljs-react-material-ui-example
+
 ## License
 
 Copyright © 2016 Dan Persa
