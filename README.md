@@ -1,40 +1,21 @@
 # hello-rum
 
-FIXME: description
-
 ## Installation
 
-Download from http://example.com/FIXME.
+```bash
+# lein figwheel
+```
 
-## Usage
+Open the shown url in the browser.
 
-FIXME: explanation
-
-    $ java -jar hello-rum-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
 
 ## Developing
 
     lein figwheel
 
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Dan Persa
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

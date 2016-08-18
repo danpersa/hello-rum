@@ -12,6 +12,7 @@
                  [rum "0.10.1"]
                  [rum-mdl "0.1.0"]
                  [figwheel-sidecar "0.5.1"]
+                 [cljs-react-material-ui "0.2.19"]
                  [com.stuartsierra/component "0.3.1"]]
   :main ^:skip-aot hello-rum.core
   :target-path "target/%s"

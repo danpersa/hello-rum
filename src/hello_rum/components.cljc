@@ -27,5 +27,4 @@
        ["Laminate (Gold on Blue)" "10" "$2.35"]])))
 
 (rum/defc button [name]
-  (mdl/button {:mdl [:raised]} name)
-  )
+  (mdl/button {:mdl [:raised]} name))
