@@ -15,11 +15,14 @@
        (rui/tab {:label "one"}
                 [:div ["hey"
                        (rui/paper "yes")]])
-       (rui/tab {:label "two"} (thing1))
+       (rui/tab {:label "two"}
+                [:div "hello"])
        (rui/tab {:label "drei"}
                 [:div
-                 (rui/paper {} "Ima paper")]))]))
+                 (rui/paper "Ima paper"
+                            (rui/raised-button "The button"))
+                 (ui/date-picker
+                   {:hint-text  "Select Date"
+                    :mode       :landscape
+                    :class-name "w-100"})]))]))
 
-(rum/defc thing1
-          []
-          [:div home-page])
